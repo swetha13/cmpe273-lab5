@@ -104,7 +104,7 @@ public class BookResource {
 			Connection connectToQueue = producer.createConnection();
 			long isbnNum = book.getIsbn();
 			
-			producer.sendMessageToQueue(connectToQueue, isbnNum);
+			//producer.sendMessageToQueue(connectToQueue, isbnNum);
 			
 			
 			producer.closeConnection(connectToQueue);
@@ -118,6 +118,7 @@ public class BookResource {
 		}
 		
 	}
+	
 	
 
 	BookDto bookResponse = new BookDto(book);
