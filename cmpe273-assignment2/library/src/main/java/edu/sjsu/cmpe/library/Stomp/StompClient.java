@@ -109,7 +109,7 @@ public class StompClient {
 			if( msg instanceof  TextMessage ) {
 				String body = ((TextMessage) msg).getText();
 				System.out.println("Received message = " + body);
-				//updateLibrary(body);
+				updateLibrary(body);
 				
 				if( "SHUTDOWN".equals(body)) {
 					break;
